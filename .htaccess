@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+
+RewriteRule ^simple/([a-zA-Z0-9_-]+)$/([a-zA-Z0-9_-]+)$ simple.php/$1/$2
+RewriteRule ^simple/([a-zA-Z0-9_-]+)$/([a-zA-Z0-9_-]+)$/ simple.php/$1/$2/
+
+RewriteRule ^restajax/([a-zA-Z0-9_-]+)$/([a-zA-Z0-9_-]+)$ restajax.php/$1/$2
+RewriteRule ^restajax/([a-zA-Z0-9_-]+)$/([a-zA-Z0-9_-]+)$/ restajax.php/$1/$2/
+</IfModule>
