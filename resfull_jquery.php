@@ -30,9 +30,9 @@ function buttonClick(){
 
 <button onclick="buttonClick();">Test Post</button>
 <select id="type">
-  <option value="POST">update</option>
-  <option value="PUT">insert</option>
-  <option value="GET">list</option>
+  <option value="POST">create</option>
+  <option value="PUT">update</option>
+  <option value="GET">retrieve</option>
   <option value="DELETE">delete</option>
 </select>
 <BR/>

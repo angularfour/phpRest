@@ -11,15 +11,15 @@ define('CHARSET', 'UTF-8');
     switch(getenv('REQUEST_METHOD'))
     {
       case 'POST':
-        $action = "update";
+        $action = "create";
         break;
       case 'GET':
-        $action = "list";
+        $action = "retrieve";
         if(isset($_REQUEST['xml']))
           $client_data = $_REQUEST['xml'];
         break;
       case 'PUT':
-        $action = "insert";
+        $action = "update";
         break;
       case 'DELETE':
         $action = "delete";

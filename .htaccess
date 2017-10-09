@@ -1,10 +1,11 @@
 <IfModule mod_rewrite.c>
 RewriteEngine On
 
+# redirect when the page is not found #
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^ /rest_api/404.php [L]
 
-RewriteRule ^simple/([a-zA-Z0-9_-]+)$/([a-zA-Z0-9_-]+)$ simple.php/$1/$2
-RewriteRule ^simple/([a-zA-Z0-9_-]+)$/([a-zA-Z0-9_-]+)$/ simple.php/$1/$2/
+ErrorDocument 404 /rest_api/404.php
 
-RewriteRule ^restajax/([a-zA-Z0-9_-]+)$/([a-zA-Z0-9_-]+)$ restajax.php/$1/$2
-RewriteRule ^restajax/([a-zA-Z0-9_-]+)$/([a-zA-Z0-9_-]+)$/ restajax.php/$1/$2/
 </IfModule>
